@@ -1,0 +1,192 @@
+FW-Matriz:
+en
+conf t
+int se0/1/1
+ip add 200.161.24.1 255.255.255.252
+no shut
+exit
+int se0/1/0
+ip add 200.161.24.26 255.255.255.252
+no shut
+exit
+int se0/0/0
+ip add 200.161.24.29 255.255.255.252
+no shut
+exit
+int se0/0/1
+ip add 200.161.24.66 255.255.255.252
+no shut
+exit
+do wr
+
+R1:
+en
+conf t
+int se0/1/0
+ip add 200.161.24.2 255.255.255.252
+no shut
+exit
+int se0/1/1
+ip add 200.161.24.41 255.255.255.252
+no shut
+exit
+int se0/0/1
+ip add 200.161.24.5 255.255.255.252
+no shut
+exit
+do wr
+
+R2:
+en
+conf t
+int se0/1/1
+ip add 200.161.24.6 255.255.255.252
+no shut
+exit
+int se0/1/0
+ip add 200.161.24.9 255.255.255.252
+no shut
+exit
+do wr
+
+FW-Filial-1:
+en
+conf t
+int se0/1/0
+ip add 200.161.24.10 255.255.255.252
+exit
+int se0/1/1
+ip add 200.161.24.13 255.255.255.252
+no shut
+exit
+int se0/0/0
+ip add 200.161.24.38 255.255.255.252
+no shut
+exit
+do wr
+
+R3:
+en
+conf t
+int se0/1/0
+ip add 200.161.24.17 255.255.255.252
+no shut
+exit
+int se0/1/1
+ip add 200.161.24.14 255.255.255.252
+no shut
+exit
+int se0/0/0
+ip add 200.161.24.61 255.255.255.252
+no shut
+exit
+
+FW-Filial-2:
+en
+conf t
+int se0/1/0
+ip add 200.161.24.18 255.255.255.252
+exit
+int se0/1/1
+ip add 200.161.24.21 255.255.255.252
+no shut
+exit
+int se0/0/0
+ip add 200.161.24.58 255.255.255.252
+no shut
+exit
+do wr
+
+R7:
+en
+conf t
+int se0/1/1
+ip add 200.161.24.37 255.255.255.252
+no shut
+exit
+int se0/1/0
+ip add 200.161.24.33 255.255.255.252
+no shut
+exit
+do wr
+
+R8:
+en
+conf t
+int se0/1/1
+ip add 200.161.24.62 255.255.255.252
+no shut
+exit
+int se0/1/0
+ip add 200.161.24.65 255.255.255.252
+no shut
+exit
+do wr
+
+R9:
+en
+conf t
+int se0/1/1
+ip add 200.161.24.50 255.255.255.252
+no shut
+exit
+int se0/1/0
+ip add 200.161.24.53 255.255.255.252
+no shut
+exit
+do wr
+
+FW-Filial-3:
+en
+conf t
+int se0/1/1
+ip add 200.161.24.54 255.255.255.252
+no shut
+exit
+int se0/1/0
+ip add 200.161.24.57 255.255.255.252
+no shut
+exit
+do wr
+
+R5:
+en
+conf t
+int se0/1/1
+ip add 200.161.24.45 255.255.255.252
+no shut
+exit
+int se0/1/0
+ip add 200.161.24.33 255.255.255.252
+no shut
+exit
+int se0/0/0
+ip add 200.161.24.30 255.255.255.252
+no shut
+exit
+int se0/0/1
+ip add 200.161.24.42 255.255.255.252
+no shut
+exit
+do wr
+
+R4:
+en
+conf t
+int se0/1/1
+ip add 200.161.24.22 255.255.255.252
+no shut
+exit
+int se0/1/0
+ip add 200.161.24.25 255.255.255.252
+no shut
+exit
+int se0/0/0
+ip add 200.161.24.49 255.255.255.252
+no shut
+exit
+int se0/0/1
+ip add 200.161.24.46 255.255.255.252
+no shut
+exit
+do wr
