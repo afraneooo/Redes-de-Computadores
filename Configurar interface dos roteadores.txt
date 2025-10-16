@@ -127,11 +127,11 @@ R9:
 en
 conf t
 int se0/1/1
-ip add 200.161.24.50 255.255.255.252
+ip add 200.161.24.53 255.255.255.252
 no shut
 exit
 int se0/1/0
-ip add 200.161.24.53 255.255.255.252
+ip add 200.161.24.50 255.255.255.252
 no shut
 exit
 do wr
@@ -191,4 +191,5 @@ no shut
 exit
 
 do wr
+
 
