@@ -1,0 +1,63 @@
+R6:
+en
+conf t
+hostname R6
+int gig0/0
+ip add 10.28.0.254 255.255.255.0
+no shut
+do wr
+
+R10:
+en
+conf t
+hostname R10
+int gig0/1
+ip add 10.28.0.253 255.255.255.0
+no shut
+int gig0/0
+ip add 10.28.1.253 255.255.255.0
+no shut
+do wr
+
+R0:
+en
+conf t
+hostname R0
+int gig0/1
+ip add 10.28.2.253 255.255.255.0
+no shut
+int gig0/0
+ip add 10.28.1.254 255.255.255.0
+no shut
+do wr
+
+R1:
+en
+conf t
+hostname R1
+int gig0/1
+ip add 10.28.3.254 255.255.255.0
+no shut
+int gig0/0
+ip add 10.28.2.254 255.255.255.0
+no shut
+do wr
+
+R5:
+en
+conf t
+hostname R5
+int gig0/0
+ip add 10.28.5.254 255.255.255.0
+no shut
+do wr
+
+R2:
+en
+conf t
+hostname R2
+int gig0/0
+ip add 10.28.4.254 255.255.255.0
+no shut
+do wr
+
