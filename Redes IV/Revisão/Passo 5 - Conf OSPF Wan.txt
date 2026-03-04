@@ -1,0 +1,61 @@
+FW-Matriz:
+
+en
+conf t
+router ospf 1
+network 200.22.2.0 0.0.0.3 area 0
+network 200.22.2.20 0.0.0.3 area 0
+exit
+do wr
+
+FW-Filial:
+
+en
+conf t
+router ospf 1
+network 200.22.2.4 0.0.0.3 area 0
+network 200.22.2.24 0.0.0.3 area 0
+network 200.22.2.8 0.0.0.3 area 0
+exit
+do wr
+
+R1:
+
+en
+conf t
+router ospf 1
+network 200.22.2.0 0.0.0.3 area 0
+network 200.22.2.4 0.0.0.3 area 0
+exit
+do wr
+
+R2:
+
+en
+conf t
+router ospf 1
+network 200.22.2.20 0.0.0.3 area 0
+network 200.22.2.16 0.0.0.3 area 0
+network 200.22.2.24 0.0.0.3 area 0
+exit
+do wr
+
+R3:
+
+en
+conf t
+router ospf 1
+network 200.22.2.12 0.0.0.3 area 0
+network 200.22.2.16 0.0.0.3 area 0
+exit
+do wr
+
+R4:
+
+en
+conf t
+router ospf 1
+network 200.22.2.8 0.0.0.3 area 0
+network 200.22.2.12 0.0.0.3 area 0
+exit
+do wr

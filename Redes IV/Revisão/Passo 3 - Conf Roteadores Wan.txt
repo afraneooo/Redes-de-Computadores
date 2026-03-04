@@ -1,0 +1,83 @@
+FW-Matriz:
+
+en
+conf t
+int se0/0/0
+ip add 200.22.2.1 255.255.255.252
+no shut
+int se0/0/1
+ip add 200.22.2.22 255.255.255.252
+no shut
+exit
+do wr
+
+FW-Filial:
+
+en
+conf t
+int se0/0/0
+ip add 200.22.2.26 255.255.255.252
+no shut
+int se0/0/1
+ip add 200.22.2.6 255.255.255.252
+no shut
+int se 0/1/0
+ip add 200.22.2.9 255.255.255.252
+no shut
+exit
+do wr
+
+R1:
+
+en
+conf t
+int se0/0/0
+ip add 200.22.2.2 255.255.255.252
+no shut
+int se0/0/1
+ip add 200.22.2.5 255.255.255.252
+no shut
+exit
+do wr
+
+R2:
+
+en
+conf t
+int se0/0/0
+ip add 200.22.2.25 255.255.255.252
+no shut
+int se0/0/1
+ip add 200.22.2.18 255.255.255.252
+no shut
+int se 0/1/0
+ip add 200.22.2.21 255.255.255.252
+no shut
+exit
+do wr
+
+R3:
+
+en
+conf t
+int se0/0/0
+ip add 200.22.2.17 255.255.255.252
+no shut
+int se0/0/1
+ip add 200.22.2.14 255.255.255.252
+no shut
+exit
+do wr
+
+R4:
+
+en
+conf t
+int se0/0/0
+ip add 200.22.2.13 255.255.255.252
+no shut
+int se0/0/1
+ip add 200.22.2.10 255.255.255.252
+no shut
+exit
+do wr

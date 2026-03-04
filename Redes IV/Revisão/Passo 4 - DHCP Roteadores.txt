@@ -1,0 +1,37 @@
+FW-Matriz:
+
+en
+conf t
+ip dhcp excluded-address 192.168.2.6
+ip dhcp pool vlan10
+network 192.168.2.0 255.255.255.248
+default-router 192.168.2.6
+ip dhcp excluded-address 192.168.2.14
+ip dhcp pool vlan11
+network 192.168.2.8 255.255.255.248
+default-router 192.168.2.14
+ip dhcp excluded-address 192.168.2.22
+ip dhcp pool vlan12
+network 192.168.2.16 255.255.255.248
+default-router 192.168.2.22
+exit
+do wr
+
+FW-Filial:
+
+en
+conf t
+ip dhcp excluded-address 10.10.2.6
+ip dhcp pool vlan100
+network 10.10.2.0 255.255.255.248
+default-router 10.10.2.6
+ip dhcp excluded-address 10.10.2.14
+ip dhcp pool vlan101
+network 10.10.2.8 255.255.255.248
+default-router 10.10.2.14
+ip dhcp excluded-address 10.10.2.30
+ip dhcp pool vlan102
+network 10.10.2.16 255.255.255.240
+default-router 10.10.2.30
+exit
+do wr

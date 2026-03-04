@@ -1,0 +1,63 @@
+Switch0:
+en
+conf t
+vlan 10
+name Diretoria
+ex
+int range fa0/1 - 5
+switchport mode access
+switchport access vlan 10
+no shutdown
+ex
+vlan 11
+name Financeiro
+ex
+int range fa0/6 - 10
+switchport mode access
+switchport access vlan 11
+no shutdown
+ex
+vlan 12
+name RH
+ex
+int range fa0/11 - 16
+switchport mode access
+switchport access vlan 12
+no shutdown
+ex
+int gig0/1
+switchport mode trunk
+do wr
+
+-----
+
+Switch1:
+en
+conf t
+vlan 100
+name Compras
+ex
+int range fa0/1 - 5
+switchport mode access
+switchport access vlan 100
+no shutdown
+ex
+vlan 101
+name Vendas1
+ex
+int range fa0/6 - 10
+switchport mode access
+switchport access vlan 101
+no shutdown
+ex
+vlan 102
+name Vendas2
+ex
+int range fa0/11 - 16
+switchport mode access
+switchport access vlan 102
+no shutdown
+ex
+int gig0/1
+switchport mode trunk
+do wr

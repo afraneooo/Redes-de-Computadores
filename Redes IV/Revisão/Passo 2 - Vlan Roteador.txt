@@ -1,0 +1,38 @@
+FW-Matriz:
+
+en
+conf t
+hostname FW-Matriz
+int gig0/0
+no shut
+int gig0/0.10
+encapsulation dot1Q 10
+ip address 192.168.2.6 255.255.255.248
+int gig0/0.11
+encapsulation dot1Q 11
+ip address 192.168.2.14 255.255.255.248
+int gig0/0.12
+encapsulation dot1Q 12
+ip address 192.168.2.22 255.255.255.248
+do wr
+
+--------
+
+FW-Filial:
+
+en
+conf t
+int gig0/0
+no shut
+int gig0/0.100
+encapsulation dot1Q 100
+ip address 10.10.2.6 255.255.255.248
+int gig0/0.101
+encapsulation dot1Q 101
+ip address 10.10.2.14 255.255.255.248
+int gig0/0.102
+encapsulation dot1Q 102
+ip address 10.10.2.30 255.255.255.240
+ex
+hostname FW-Filial
+do wr
